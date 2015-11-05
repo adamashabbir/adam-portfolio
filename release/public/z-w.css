@@ -610,7 +610,7 @@ a {
     position: relative;
     background-position: center;
     background-size: cover;
-    background-image: url('/public/img/profile/z.jpg'); }
+    background-image: url('/public/img/profile/adam-home.jpg'); }
     [data-template="hero"] .hub-hero .hero-main .overlay {
       position: absolute;
       top: 0;
@@ -708,7 +708,7 @@ a {
     height: 350px;
     background-size: cover;
     background-position: center;
-    background-image: url('/public/img/profile/z-work.jpg'); }
+    background-image: url('/public/img/profile/pic-1.jpg'); }
     [data-template="hero"] .pad .back-l-one .overlay-small, [data-template="hero"] .pad .back-l-two .overlay-small, [data-template="hero"] .pad .back-l-three .overlay-small {
       position: absolute;
       top: 0;
@@ -763,9 +763,9 @@ a {
             line-height: 25px;
             padding-left: 5px; }
   [data-template="hero"] .pad .back-l-two {
-    background-image: url('/public/img/profile/z-listen.jpg'); }
+    background-image: url('/public/img/profile/pic-2.jpg'); }
   [data-template="hero"] .pad .back-l-three {
-    background-image: url('/public/img/profile/z-surf-two.jpg'); }
+    background-image: url('/public/img/profile/pic-3.jpg'); }
 
 @media (max-width: 991px) {
   [data-template="hero"] .hub-hero {

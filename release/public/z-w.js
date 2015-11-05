@@ -1,52 +1,5 @@
 var app = angular.module('z-w', []);
 (function () {
-
-
-    var GAEvents = [
-        ['.hero-main-p', 'hero-main-button', 'home hero button'],
-        ['.hero-p', 'hero-trio-button', 'home trio button'],
-        ['.podcast-backdrop', 'podcast-small', 'podcast small'],
-        ['.product-backdrop', 'product-small', 'product-small'],
-        ['.post-backdrop', 'post-small', 'post-small'],
-        ['.code-banner-join', 'code-lounge-button', 'code-lounge button'],
-        ['.header-tabs', 'header-tabs', 'header tabs'],
-        ['.menu-btn', 'burger-menu', 'burger menu'],
-        ['.tabs', 'burger-menu-tabs', 'burger menu tabs'],
-        ['.social-icons', 'burger-menu-social', 'burger menu social icons'],
-        ['.podcast-p', 'podcast-hero-button', 'podcast hero button'],
-        ['.podcast-back', 'podcast-person', 'podcast-person'],
-        ['.lifestyle-p', 'lifestyle-hero-button', 'lifestyle hero button'],
-        ['.blog-post-backdrop', 'blog-post', 'lifestyle hero button'],
-        ['.social-foot', 'social-icon-footer', 'social icons footer'],
-        ['.blog-p', 'blog-button-header', 'blog button hero'],
-        ['.get-reading', 'blog-button-post', 'blog button post'],
-        ['.social-icon', 'blog-social-media-share', 'blog social media share'],
-        ['.subscribe-btn', 'email-subscribe-button', 'email subscribe button'],
-        ['.subscribe-btn-health', 'email-subscribe-button-health', 'email subscribe button health'],
-        ['.subscribe-btn-podcast', 'email-subscribe-button-podcast', 'email subscribe button podcast'],
-        ['.lifestyle-p', 'lifestyle-hero-button', 'lifestyle hero button'],
-        ['.mini-tabs', 'tablet-mobile-tabs', 'tablet mobile tabs'],
-        ['.download', 'download-button', 'download button']
-
-
-
-    ];
-
-
-    for (var i in GAEvents) {
-        setGAAnalyticsEvent(GAEvents[i]);
-    }
-
-    function setGAAnalyticsEvent(array) {
-        $(document).on('click', array[0], function () {
-            console.log(array);
-            ga('send', 'event', array[1], array[2]);
-        });
-    }
-
-    console.log(GAEvents);
-}());
-(function () {
     app.controller('AdvertiseCtrl', ['$scope', function ($scope) {
 
 
@@ -93,6 +46,53 @@ var app = angular.module('z-w', []);
 
     }]);
 }());
+(function () {
+
+
+    var GAEvents = [
+        ['.hero-main-p', 'hero-main-button', 'home hero button'],
+        ['.hero-p', 'hero-trio-button', 'home trio button'],
+        ['.podcast-backdrop', 'podcast-small', 'podcast small'],
+        ['.product-backdrop', 'product-small', 'product-small'],
+        ['.post-backdrop', 'post-small', 'post-small'],
+        ['.code-banner-join', 'code-lounge-button', 'code-lounge button'],
+        ['.header-tabs', 'header-tabs', 'header tabs'],
+        ['.menu-btn', 'burger-menu', 'burger menu'],
+        ['.tabs', 'burger-menu-tabs', 'burger menu tabs'],
+        ['.social-icons', 'burger-menu-social', 'burger menu social icons'],
+        ['.podcast-p', 'podcast-hero-button', 'podcast hero button'],
+        ['.podcast-back', 'podcast-person', 'podcast-person'],
+        ['.lifestyle-p', 'lifestyle-hero-button', 'lifestyle hero button'],
+        ['.blog-post-backdrop', 'blog-post', 'lifestyle hero button'],
+        ['.social-foot', 'social-icon-footer', 'social icons footer'],
+        ['.blog-p', 'blog-button-header', 'blog button hero'],
+        ['.get-reading', 'blog-button-post', 'blog button post'],
+        ['.social-icon', 'blog-social-media-share', 'blog social media share'],
+        ['.subscribe-btn', 'email-subscribe-button', 'email subscribe button'],
+        ['.subscribe-btn-health', 'email-subscribe-button-health', 'email subscribe button health'],
+        ['.subscribe-btn-podcast', 'email-subscribe-button-podcast', 'email subscribe button podcast'],
+        ['.lifestyle-p', 'lifestyle-hero-button', 'lifestyle hero button'],
+        ['.mini-tabs', 'tablet-mobile-tabs', 'tablet mobile tabs'],
+        ['.download', 'download-button', 'download button']
+
+
+
+    ];
+
+
+    for (var i in GAEvents) {
+        setGAAnalyticsEvent(GAEvents[i]);
+    }
+
+    function setGAAnalyticsEvent(array) {
+        $(document).on('click', array[0], function () {
+            console.log(array);
+            ga('send', 'event', array[1], array[2]);
+        });
+    }
+
+    console.log(GAEvents);
+}());
 (function(){
     app.controller('BioCtrl', ['$scope', function($scope){
 
@@ -127,6 +127,53 @@ var app = angular.module('z-w', []);
     }
 
 }]);
+}());
+(function () {
+    app.controller('BlogCtrl', ['$scope', function ($scope) {
+
+
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click',function (e) {
+                e.preventDefault();
+
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 1200, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+
+        // Exit intent
+        function addEvent(obj, evt, fn) {
+            if (obj.addEventListener) {
+                obj.addEventListener(evt, fn, false);
+            }
+            else if (obj.attachEvent) {
+                obj.attachEvent("on" + evt, fn);
+            }
+        }
+
+// Exit intent trigger
+        addEvent(document, 'mouseout', function(evt) {
+
+            if (evt.toElement == null && evt.relatedTarget == null ) {
+                $('.lightbox').slideDown();
+            };
+
+        });
+
+// Closing the Popup Box
+        $('a.close').click(function(){
+            $('.lightbox').slideUp();
+        });
+
+
+
+    }]);
 }());
 (function () {
     app.controller('BlogPost001Ctrl', ['$scope', function ($scope) {
@@ -206,53 +253,6 @@ var app = angular.module('z-w', []);
     }]);
 }());
 
-(function () {
-    app.controller('BlogCtrl', ['$scope', function ($scope) {
-
-
-        $(document).ready(function(){
-            $('a[href^="#"]').on('click',function (e) {
-                e.preventDefault();
-
-                var target = this.hash;
-                var $target = $(target);
-
-                $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top
-                }, 1200, 'swing', function () {
-                    window.location.hash = target;
-                });
-            });
-        });
-
-        // Exit intent
-        function addEvent(obj, evt, fn) {
-            if (obj.addEventListener) {
-                obj.addEventListener(evt, fn, false);
-            }
-            else if (obj.attachEvent) {
-                obj.attachEvent("on" + evt, fn);
-            }
-        }
-
-// Exit intent trigger
-        addEvent(document, 'mouseout', function(evt) {
-
-            if (evt.toElement == null && evt.relatedTarget == null ) {
-                $('.lightbox').slideDown();
-            };
-
-        });
-
-// Closing the Popup Box
-        $('a.close').click(function(){
-            $('.lightbox').slideUp();
-        });
-
-
-
-    }]);
-}());
 (function(){
    app.controller('HeaderCtrl', ['$scope', function ($scope){
 
@@ -444,20 +444,6 @@ var app = angular.module('z-w', []);
     }]);
 }());
 (function () {
-    app.controller('PressCtrl', ['$scope', function ($scope) {
-
-        $( document ).ready(function() {
-            $('.press-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.press-line').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.press-pack').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2000});
-
-        });
-
-
-
-    }]);
-}());
-(function () {
     app.controller('PodcastCtrl', ['$scope', function ($scope) {
 
 
@@ -499,6 +485,20 @@ var app = angular.module('z-w', []);
         $('a.close').click(function(){
             $('.lightbox').slideUp();
         });
+
+    }]);
+}());
+(function () {
+    app.controller('PressCtrl', ['$scope', function ($scope) {
+
+        $( document ).ready(function() {
+            $('.press-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.press-line').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.press-pack').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2000});
+
+        });
+
+
 
     }]);
 }());
