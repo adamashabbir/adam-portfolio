@@ -3,7 +3,7 @@
     [data-template="hero"] {
       .hub-hero {
         //margin-top: 60px;
-        height: 950px;
+        height: 1700px;
         position: relative;
 
         .hero-main {
@@ -64,6 +64,7 @@
             background-size: cover;
             background-position: center;
             background-image: none;
+            background: rgba(200,5,150, .6);
 
             .overlay-small {
               position: absolute;
@@ -139,10 +140,12 @@
 
           .back-l-two {
             background-image: none;
+            background: rgba(200,5,150, .6);
           }
 
           .back-l-three {
             background-image: none;
+            background: rgba(200,5,150, .6);
           }
 
         }
