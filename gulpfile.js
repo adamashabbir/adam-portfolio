@@ -74,7 +74,7 @@ gulp.task("copy-public", function(){
 
 gulp.task("gen-html", function(){
     var pages = {
-        index: ['head', 'menu', 'header', 'hero', 'social-media', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'footer'],
+        index: ['head', 'menu', 'header', 'hero', 'footer'],
         products: ['head-products', 'menu', 'header', 'project-post', 'hero-recent', 'hero-recent-post', 'email',  'code-banner', 'footer'],
         "products/common-pence": ['head-commonpence', 'menu', 'header', 'common-pence', 'hero-recent', 'hero-recent-post', 'email',  'code-banner', 'footer'],
         collaborate: ['head', 'menu', 'header', 'collaborate', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer'],

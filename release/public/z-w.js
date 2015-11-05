@@ -46,6 +46,109 @@ var app = angular.module('z-w', []);
 
     }]);
 }());
+(function(){
+    app.controller('BioCtrl', ['$scope', function($scope){
+
+        $(document).ready(function(){
+            $('.bio-page-title').velocity('stop').velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.bio-underline').velocity('stop').velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.bio-tag-01').velocity('stop').velocity("transition.slideLeftBigIn", {duration: 2000});
+            $('.z-bio-icon').velocity('stop').velocity("transition.shrinkIn", {duration: 2500});
+            $('.z-bio-tag').velocity('stop').velocity("transition.slideUpBigIn", {duration: 2500});
+
+        });
+
+
+    }]);
+}());
+(function(){
+    app.controller('BioEdCtrl', ['$scope', function($scope){
+
+
+
+
+    }]);
+}());
+(function()
+{app.controller('BioSkillCtrl', ['$scope', function($scope){
+
+
+    var win = $(window).height();
+
+    if (win > 741){
+        $('.skill').velocity('stop').velocity("transition.slideLeftIn", {duration: 800});
+    }
+
+}]);
+}());
+(function () {
+    app.controller('BlogPost002Ctrl', ['$scope', function ($scope) {
+        $(document).ready(function(){
+      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
+
+
+            $(document).ready(function(){
+                $('a[href^="#"]').on('click',function (e) {
+                    e.preventDefault();
+
+                    var target = this.hash;
+                    var $target = $(target);
+
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top -125
+                    }, 1200, 'swing', function () {
+                        window.location.hash = target;
+                    });
+                });
+            });
+        });
+    }]);
+}());
+
+(function () {
+    app.controller('BlogPost001Ctrl', ['$scope', function ($scope) {
+        $(document).ready(function(){
+      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
+
+
+        });
+    }]);
+}());
+
+(function () {
+    app.controller('BlogPost003Ctrl', ['$scope', function ($scope) {
+        $(document).ready(function(){
+      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
+
+
+            $(document).ready(function(){
+                $('a[href^="#"]').on('click',function (e) {
+                    e.preventDefault();
+
+                    var target = this.hash;
+                    var $target = $(target);
+
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top -125
+                    }, 1200, 'swing', function () {
+                        window.location.hash = target;
+                    });
+                });
+            });
+        });
+    }]);
+}());
+
+(function () {
+    app.controller('BlogPost005Ctrl', ['$scope', function ($scope) {
+        $(document).ready(function(){
+      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
+
+
+        });
+    }]);
+}());
+
 (function () {
 
 
@@ -92,41 +195,6 @@ var app = angular.module('z-w', []);
     }
 
     console.log(GAEvents);
-}());
-(function(){
-    app.controller('BioCtrl', ['$scope', function($scope){
-
-        $(document).ready(function(){
-            $('.bio-page-title').velocity('stop').velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.bio-underline').velocity('stop').velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.bio-tag-01').velocity('stop').velocity("transition.slideLeftBigIn", {duration: 2000});
-            $('.z-bio-icon').velocity('stop').velocity("transition.shrinkIn", {duration: 2500});
-            $('.z-bio-tag').velocity('stop').velocity("transition.slideUpBigIn", {duration: 2500});
-
-        });
-
-
-    }]);
-}());
-(function(){
-    app.controller('BioEdCtrl', ['$scope', function($scope){
-
-
-
-
-    }]);
-}());
-(function()
-{app.controller('BioSkillCtrl', ['$scope', function($scope){
-
-
-    var win = $(window).height();
-
-    if (win > 741){
-        $('.skill').velocity('stop').velocity("transition.slideLeftIn", {duration: 800});
-    }
-
-}]);
 }());
 (function () {
     app.controller('BlogCtrl', ['$scope', function ($scope) {
@@ -175,84 +243,6 @@ var app = angular.module('z-w', []);
 
     }]);
 }());
-(function () {
-    app.controller('BlogPost001Ctrl', ['$scope', function ($scope) {
-        $(document).ready(function(){
-      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
-
-
-        });
-    }]);
-}());
-
-(function () {
-    app.controller('BlogPost002Ctrl', ['$scope', function ($scope) {
-        $(document).ready(function(){
-      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
-
-
-            $(document).ready(function(){
-                $('a[href^="#"]').on('click',function (e) {
-                    e.preventDefault();
-
-                    var target = this.hash;
-                    var $target = $(target);
-
-                    $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top -125
-                    }, 1200, 'swing', function () {
-                        window.location.hash = target;
-                    });
-                });
-            });
-        });
-    }]);
-}());
-
-(function () {
-    app.controller('BlogPost003Ctrl', ['$scope', function ($scope) {
-        $(document).ready(function(){
-      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
-
-
-            $(document).ready(function(){
-                $('a[href^="#"]').on('click',function (e) {
-                    e.preventDefault();
-
-                    var target = this.hash;
-                    var $target = $(target);
-
-                    $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top -125
-                    }, 1200, 'swing', function () {
-                        window.location.hash = target;
-                    });
-                });
-            });
-        });
-    }]);
-}());
-
-(function () {
-    app.controller('BlogPost004Ctrl', ['$scope', function ($scope) {
-        $(document).ready(function(){
-      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
-
-
-        });
-    }]);
-}());
-
-(function () {
-    app.controller('BlogPost005Ctrl', ['$scope', function ($scope) {
-        $(document).ready(function(){
-      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
-
-
-        });
-    }]);
-}());
-
 (function(){
    app.controller('HeaderCtrl', ['$scope', function ($scope){
 
@@ -274,44 +264,6 @@ var app = angular.module('z-w', []);
          }
       });
    }]);
-}());
-
-(function () {
-    app.controller('HeroCtrl', ['$scope', function ($scope) {
-
-        $( document ).ready(function() {
-            $('.tag').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1000});
-            $('.about').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.jump').velocity("stop").velocity("transition.slideUpBigIn", {duration: 2000});
-
-        });
-
-
-        // Exit intent
-        function addEvent(obj, evt, fn) {
-            if (obj.addEventListener) {
-                obj.addEventListener(evt, fn, false);
-            }
-            else if (obj.attachEvent) {
-                obj.attachEvent("on" + evt, fn);
-            }
-        }
-
-// Exit intent trigger
-        addEvent(document, 'mouseout', function(evt) {
-
-            if (evt.toElement == null && evt.relatedTarget == null ) {
-                $('.lightbox').slideDown();
-            };
-
-        });
-
-// Closing the Popup Box
-        $('a.close').click(function(){
-            $('.lightbox').slideUp();
-        });
-
-    }]);
 }());
 
 (function () {
@@ -404,6 +356,68 @@ var app = angular.module('z-w', []);
 }());
 
 (function () {
+    app.controller('BlogPost004Ctrl', ['$scope', function ($scope) {
+        $(document).ready(function(){
+      $(".social-icon").velocity("stop").velocity("callout.bounce",{stagger: 1000, loop: 5});
+
+
+        });
+    }]);
+}());
+
+(function () {
+    app.controller('HeroCtrl', ['$scope', function ($scope) {
+
+        $( document ).ready(function() {
+            $('.tag').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1000});
+            $('.about').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.jump').velocity("stop").velocity("transition.slideUpBigIn", {duration: 2000});
+
+        });
+
+
+        // Exit intent
+        function addEvent(obj, evt, fn) {
+            if (obj.addEventListener) {
+                obj.addEventListener(evt, fn, false);
+            }
+            else if (obj.attachEvent) {
+                obj.attachEvent("on" + evt, fn);
+            }
+        }
+
+// Exit intent trigger
+        addEvent(document, 'mouseout', function(evt) {
+
+            if (evt.toElement == null && evt.relatedTarget == null ) {
+                $('.lightbox').slideDown();
+            };
+
+        });
+
+// Closing the Popup Box
+        $('a.close').click(function(){
+            $('.lightbox').slideUp();
+        });
+
+    }]);
+}());
+
+(function () {
+    app.controller('ProjectPageCtrl', ['$scope', function ($scope) {
+
+        $( document ).ready(function() {
+            $('.project-page-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.project-underline').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.project-backdrop').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2500});
+
+        });
+
+
+
+    }]);
+}());
+(function () {
     app.controller('MenuCtrl', ['$scope', function ($scope) {
 
         /*$(document).on("click", ".fa-bars", function () {
@@ -495,20 +509,6 @@ var app = angular.module('z-w', []);
             $('.press-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
             $('.press-line').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
             $('.press-pack').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2000});
-
-        });
-
-
-
-    }]);
-}());
-(function () {
-    app.controller('ProjectPageCtrl', ['$scope', function ($scope) {
-
-        $( document ).ready(function() {
-            $('.project-page-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.project-underline').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.project-backdrop').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2500});
 
         });
 

@@ -107,17 +107,19 @@ a {
 .noscroll {
   overflow: hidden; }
 
-[data-template="footer"] #footer .footer-tag {
-  background: rgba(0, 0, 0, 0.7);
-  text-align: center; }
-  [data-template="footer"] #footer .footer-tag a {
-    display: inline-block;
-    margin: 40px 16px 25px 16px;
-    color: white;
-    cursor: pointer;
-    font-size: 20px; }
-    [data-template="footer"] #footer .footer-tag a:hover {
-      color: #00d4b4; }
+[data-template="footer"] #footer {
+  position: relative; }
+  [data-template="footer"] #footer .footer-tag {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center; }
+    [data-template="footer"] #footer .footer-tag a {
+      display: inline-block;
+      margin: 40px 16px 25px 16px;
+      color: white;
+      cursor: pointer;
+      font-size: 20px; }
+      [data-template="footer"] #footer .footer-tag a:hover {
+        color: #00d4b4; }
 
 @media (max-width: 991px) {
   [data-template="footer"] #footer .footer-tag {
@@ -478,876 +480,335 @@ a {
 [data-template="hero"] .hub-hero {
   height: 950px;
   position: relative; }
-  [data-template="hero"] .hub-hero .lightbox {
-    /** Hide the lightbox */
-    display: none;
-    /** Apply basic lightbox styling */
-    position: fixed;
-    z-index: 9999;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    color: #333333;
-    background: rgba(255, 255, 255, 0.9); }
-  [data-template="hero"] .hub-hero .lightbox:after {
-    content: '';
-    display: table;
-    clear: both; }
-  [data-template="hero"] .hub-hero .lightbox .box {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    min-width: 500px;
-    margin: 100px auto;
-    padding: 20px;
-    top: 25%;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 1px 26px -3px #777777; }
-  [data-template="hero"] .hub-hero .lightbox .title {
-    margin: 0;
-    padding: 0 0 10px 0;
-    border-bottom: 1px #ccc solid;
-    font-size: 22px;
-    color: white;
-    text-align: center; }
-  [data-template="hero"] .hub-hero .lightbox .content {
-    display: block;
-    padding: 25px 0 0 0;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    color: white; }
-    [data-template="hero"] .hub-hero .lightbox .content span {
-      color: #00d4b4; }
-    [data-template="hero"] .hub-hero .lightbox .content image {
-      width: 100%;
-      height: auto; }
-  [data-template="hero"] .hub-hero .lightbox .close {
-    float: right;
-    display: block;
-    text-decoration: none;
-    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 22px;
-    color: white; }
-    [data-template="hero"] .hub-hero .lightbox .close i {
-      color: white; }
-  [data-template="hero"] .hub-hero .lightbox .open {
-    /** Show lightbox when mouse leaves the browser window */
-    display: block;
-    outline: none; }
-  [data-template="hero"] .hub-hero #mc_embed_signup {
-    background: none;
-    clear: left;
-    font-size: 14px;
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  [data-template="hero"] .hub-hero #mc_embed_signup .mc-field-group input {
-    background: white;
-    height: 40px;
-    font-size: 15px;
-    padding-top: 11px;
-    width: 300px;
-    margin: 0 auto;
-    color: grey; }
-  [data-template="hero"] .hub-hero #mc_embed_signup .mc-field-group {
-    clear: left;
-    position: relative;
-    padding-bottom: 3%;
-    min-height: 50px; }
-  [data-template="hero"] .hub-hero #mc_embed_signup_scroll {
-    width: 300px;
-    margin: 0 auto; }
-  [data-template="hero"] .hub-hero #mc_embed_signup input.button {
-    clear: both;
-    background: #00d4b4;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: bold;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: top;
-    white-space: nowrap;
-    width: 300px;
-    margin: 0 auto; }
-    [data-template="hero"] .hub-hero #mc_embed_signup input.button:hover {
-      background: #00d4b4; }
-  [data-template="hero"] .hub-hero #mc_embed_signup div.mce_inline_error {
-    padding: 5px 10px;
-    width: 300px;
-    background-color: #EF3A5D;
-    font-weight: bold;
-    z-index: 1;
-    color: #fff; }
-  [data-template="hero"] .hub-hero #mc_embed_signup #mce-success-response {
-    color: grey;
-    font-size: 10px;
-    text-align: center;
-    display: none;
-    background: none;
-    width: 100%;
-    padding: 0 0; }
-  [data-template="hero"] .hub-hero #mc_embed_signup div#mce-responses {
-    float: left;
-    top: -1.4em;
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
-    clear: both;
-    padding: 0 10px; }
-  [data-template="hero"] .hub-hero #mc_embed_signup form {
-    display: block;
-    position: relative;
-    text-align: left;
-    padding: 0; }
   [data-template="hero"] .hub-hero .hero-main {
-    height: 600px;
+    height: 650px;
     position: relative;
-    background-position: center;
-    background-size: cover;
-    background-image: url('/public/img/profile/adam-home.jpg'); }
+    /*   background-size: cover;
+      background-position: center;
+      background-image: url('/public/img/profile/adam-home.jpg');*/ }
+    [data-template="hero"] .hub-hero .hero-main video#bgvid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+      background: url(polina.jpg) no-repeat;
+      background-size: cover; }
     [data-template="hero"] .hub-hero .hero-main .overlay {
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
-      /* background: #ffc200;*/
-      background: rgba(0, 0, 0, 0.4);
-      -webkit-transition: 0.5s;
-              transition: 0.5s;
-      /*  .hub-hero-txt {
-          color: #f4f4f4;
-          font-size: 45px;
-          text-align: center;*/ }
-      [data-template="hero"] .hub-hero .hero-main .overlay:hover {
-        background: rgba(0, 0, 0, 0.1); }
-        [data-template="hero"] .hub-hero .hero-main .overlay:hover .hero-main-p:hover {
-          background: #ffc200; }
-      [data-template="hero"] .hub-hero .hero-main .overlay i {
-        position: relative;
-        padding-top: 200px;
-        color: white;
-        font-size: 30px;
-        text-align: center;
-        width: 100%; }
+      background: rgba(0, 0, 0, 0.3); }
       [data-template="hero"] .hub-hero .hero-main .overlay .hero-main-tag {
         position: relative;
+        padding-top: 250px;
         color: white;
-        font-size: 40px;
-        line-height: 50px;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 15px; }
-      [data-template="hero"] .hub-hero .hero-main .overlay a {
-        text-decoration: none;
-        color: white; }
-        [data-template="hero"] .hub-hero .hero-main .overlay a .hero-main-p {
-          position: relative;
-          font-size: 15px;
-          line-height: 35px;
-          margin: 0 auto;
-          text-align: center;
-          margin-top: 15px;
-          padding-top: 5px;
-          width: 250px;
-          border: 1px solid white;
-          color: white;
-          cursor: pointer; }
-          [data-template="hero"] .hub-hero .hero-main .overlay a .hero-main-p i {
-            display: inline;
-            font-size: 15px;
-            line-height: 35px;
-            padding-left: 5px; }
-      [data-template="hero"] .hub-hero .hero-main .overlay .tag {
-        position: absolute;
-        text-align: center;
-        top: 250px;
-        left: 0;
-        right: 0;
-        padding: 0 30px;
-        margin-bottom: 30px;
-        font-size: 40px;
-        line-height: 50px; }
-      [data-template="hero"] .hub-hero .hero-main .overlay .about {
-        position: absolute;
-        text-align: center;
-        top: 350px;
-        left: 0;
-        right: 0;
-        padding: 0 30px;
-        margin-bottom: 30px;
-        font-size: 33px;
-        line-height: 45px; }
-      [data-template="hero"] .hub-hero .hero-main .overlay .jump {
-        position: absolute;
-        text-align: center;
-        top: 450px;
-        font-size: 30px;
-        line-height: 45px;
-        color: white;
-        left: 0;
-        margin: 0 auto;
-        right: 0; }
-        [data-template="hero"] .hub-hero .hero-main .overlay .jump a {
-          text-decoration: none; }
-          [data-template="hero"] .hub-hero .hero-main .overlay .jump a span {
-            color: #EF5B82;
-            cursor: pointer; }
-            [data-template="hero"] .hub-hero .hero-main .overlay .jump a span:hover {
-              color: #D65476; }
-[data-template="hero"] .pad {
-  padding: 0; }
-  [data-template="hero"] .pad .back-l-one, [data-template="hero"] .pad .back-l-two, [data-template="hero"] .pad .back-l-three {
-    position: relative;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    background-image: url('/public/img/profile/pic-1.jpg'); }
-    [data-template="hero"] .pad .back-l-one .overlay-small, [data-template="hero"] .pad .back-l-two .overlay-small, [data-template="hero"] .pad .back-l-three .overlay-small {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      /* background: #ffc200;*/
-      background: rgba(0, 0, 0, 0.4);
-      margin: 0 auto;
-      -webkit-transition: 0.5s;
-              transition: 0.5s; }
-      [data-template="hero"] .pad .back-l-one .overlay-small:hover, [data-template="hero"] .pad .back-l-two .overlay-small:hover, [data-template="hero"] .pad .back-l-three .overlay-small:hover {
-        background: rgba(0, 0, 0, 0.1); }
-        [data-template="hero"] .pad .back-l-one .overlay-small:hover a, [data-template="hero"] .pad .back-l-two .overlay-small:hover a, [data-template="hero"] .pad .back-l-three .overlay-small:hover a {
-          text-decoration: none; }
-          [data-template="hero"] .pad .back-l-one .overlay-small:hover a .hero-p:hover, [data-template="hero"] .pad .back-l-two .overlay-small:hover a .hero-p:hover, [data-template="hero"] .pad .back-l-three .overlay-small:hover a .hero-p:hover {
-            cursor: pointer;
-            background: #ffc200; }
-      [data-template="hero"] .pad .back-l-one .overlay-small i, [data-template="hero"] .pad .back-l-two .overlay-small i, [data-template="hero"] .pad .back-l-three .overlay-small i {
-        position: relative;
-        padding-top: 110px;
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        width: 100%; }
-      [data-template="hero"] .pad .back-l-one .overlay-small .hero-tag, [data-template="hero"] .pad .back-l-two .overlay-small .hero-tag, [data-template="hero"] .pad .back-l-three .overlay-small .hero-tag {
-        position: relative;
-        color: white;
-        font-size: 30px;
+        font-size: 60px;
         line-height: 40px;
+        text-align: center; }
+      [data-template="hero"] .hub-hero .hero-main .overlay .hero-main-tag-p {
+        position: relative;
+        padding-top: 50px;
+        color: white;
+        font-size: 15px;
+        line-height: 30px;
+        text-align: center; }
+  [data-template="hero"] .hub-hero .pad {
+    padding: 0; }
+    [data-template="hero"] .hub-hero .pad .back-l-one, [data-template="hero"] .hub-hero .pad .back-l-two, [data-template="hero"] .hub-hero .pad .back-l-three {
+      position: relative;
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+      background-image: none; }
+      [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* background: #ffc200;*/
+        background: rgba(0, 0, 0, 0.7);
         margin: 0 auto;
-        text-align: center;
-        padding-top: 15px; }
-      [data-template="hero"] .pad .back-l-one .overlay-small a, [data-template="hero"] .pad .back-l-two .overlay-small a, [data-template="hero"] .pad .back-l-three .overlay-small a {
-        text-decoration: none;
-        color: white; }
-        [data-template="hero"] .pad .back-l-one .overlay-small a .hero-p, [data-template="hero"] .pad .back-l-two .overlay-small a .hero-p, [data-template="hero"] .pad .back-l-three .overlay-small a .hero-p {
+        -webkit-transition: 0.5s;
+                transition: 0.5s; }
+        [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover {
+          background: rgba(0, 0, 0, 0.4); }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover a, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover a, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover a {
+            text-decoration: none; }
+            [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover a .hero-p:hover, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover a .hero-p:hover, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover a .hero-p:hover {
+              cursor: pointer;
+              background: #ffc200; }
+        [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small i, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small i, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small i {
           position: relative;
-          font-size: 12px;
-          line-height: 25px;
+          padding-top: 110px;
+          color: white;
+          font-size: 20px;
+          text-align: center;
+          width: 100%; }
+        [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small .hero-tag, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small .hero-tag, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small .hero-tag {
+          position: relative;
+          color: white;
+          font-size: 30px;
+          line-height: 40px;
           margin: 0 auto;
           text-align: center;
-          margin-top: 15px;
-          padding-top: 5px;
-          width: 200px;
-          border: 1px solid white;
-          color: white;
-          cursor: pointer; }
-          [data-template="hero"] .pad .back-l-one .overlay-small a .hero-p i, [data-template="hero"] .pad .back-l-two .overlay-small a .hero-p i, [data-template="hero"] .pad .back-l-three .overlay-small a .hero-p i {
-            display: inline;
-            font-size: 11px;
+          padding-top: 15px; }
+        [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a {
+          text-decoration: none;
+          color: white; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a .hero-p, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a .hero-p, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a .hero-p {
+            position: relative;
+            font-size: 12px;
             line-height: 25px;
-            padding-left: 5px; }
-  [data-template="hero"] .pad .back-l-two {
-    background-image: url('/public/img/profile/pic-2.jpg'); }
-  [data-template="hero"] .pad .back-l-three {
-    background-image: url('/public/img/profile/pic-3.jpg'); }
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 5px;
+            width: 200px;
+            border: 1px solid white;
+            color: white;
+            cursor: pointer; }
+            [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a .hero-p i, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a .hero-p i, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a .hero-p i {
+              display: inline;
+              font-size: 11px;
+              line-height: 25px;
+              padding-left: 5px; }
+    [data-template="hero"] .hub-hero .pad .back-l-two {
+      background-image: none; }
+    [data-template="hero"] .hub-hero .pad .back-l-three {
+      background-image: none; }
 
 @media (max-width: 991px) {
   [data-template="hero"] .hub-hero {
-    height: 1650px;
+    height: 950px;
     position: relative; }
-    [data-template="hero"] .hub-hero .lightbox {
-      /** Hide the lightbox */
-      display: none;
-      /** Apply basic lightbox styling */
-      position: fixed;
-      z-index: 9999;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      color: #333333;
-      background: rgba(255, 255, 255, 0.6); }
-    [data-template="hero"] .hub-hero .lightbox:after {
-      content: '';
-      display: table;
-      clear: both; }
-    [data-template="hero"] .hub-hero .lightbox .box {
-      width: -webkit-min-content;
-      width: -moz-min-content;
-      width: min-content;
-      min-width: 500px;
-      margin: 150px auto;
-      padding: 20px;
-      top: 25%;
-      background-color: rgba(0, 0, 0, 0.7);
-      box-shadow: 0px 1px 26px -3px #777777; }
-    [data-template="hero"] .hub-hero .lightbox .title {
-      margin: 0;
-      padding: 0 0 10px 0;
-      border-bottom: 1px #ccc solid;
-      font-size: 22px;
-      color: white;
-      text-align: center; }
-    [data-template="hero"] .hub-hero .lightbox .content {
-      display: block;
-      padding: 25px 0 0 0;
-      font-size: 18px;
-      line-height: 22px;
-      text-align: center;
-      color: white; }
-      [data-template="hero"] .hub-hero .lightbox .content span {
-        color: #00d4b4; }
-      [data-template="hero"] .hub-hero .lightbox .content image {
-        width: 100%;
-        height: auto; }
-    [data-template="hero"] .hub-hero .lightbox .close {
-      float: right;
-      display: block;
-      text-decoration: none;
-      font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 22px;
-      color: white; }
-      [data-template="hero"] .hub-hero .lightbox .close i {
-        color: white; }
-    [data-template="hero"] .hub-hero .lightbox .open {
-      /** Show lightbox when mouse leaves the browser window */
-      display: block;
-      outline: none; }
-    [data-template="hero"] .hub-hero #mc_embed_signup {
-      background: none;
-      clear: left;
-      font-size: 14px;
-      display: block;
-      margin-top: 20px;
-      margin-bottom: 20px; }
-    [data-template="hero"] .hub-hero #mc_embed_signup .mc-field-group input {
-      background: white;
-      height: 40px;
-      font-size: 15px;
-      padding-top: 11px;
-      width: 300px;
-      margin: 0 auto;
-      color: grey; }
-    [data-template="hero"] .hub-hero #mc_embed_signup .mc-field-group {
-      clear: left;
-      position: relative;
-      padding-bottom: 3%;
-      min-height: 50px; }
-    [data-template="hero"] .hub-hero #mc_embed_signup_scroll {
-      width: 300px;
-      margin: 0 auto; }
-    [data-template="hero"] .hub-hero #mc_embed_signup input.button {
-      clear: both;
-      background: #00d4b4;
-      color: white;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 15px;
-      font-weight: bold;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      text-decoration: none;
-      vertical-align: top;
-      white-space: nowrap;
-      width: 300px;
-      margin: 0 auto; }
-      [data-template="hero"] .hub-hero #mc_embed_signup input.button:hover {
-        background: #00d4b4; }
-    [data-template="hero"] .hub-hero #mc_embed_signup div.mce_inline_error {
-      padding: 5px 10px;
-      width: 300px;
-      background-color: #EF3A5D;
-      font-weight: bold;
-      z-index: 1;
-      color: #fff; }
-    [data-template="hero"] .hub-hero #mc_embed_signup #mce-success-response {
-      color: grey;
-      font-size: 10px;
-      text-align: center;
-      display: none;
-      background: none;
-      width: 100%;
-      padding: 0 0; }
-    [data-template="hero"] .hub-hero #mc_embed_signup div#mce-responses {
-      float: left;
-      top: -1.4em;
-      overflow: hidden;
-      width: 100%;
-      margin: 0;
-      clear: both;
-      padding: 0 10px; }
-    [data-template="hero"] .hub-hero #mc_embed_signup form {
-      display: block;
-      position: relative;
-      text-align: left;
-      padding: 0; }
     [data-template="hero"] .hub-hero .hero-main {
-      height: 600px;
+      height: 650px;
       position: relative;
-      background-position: center;
-      background-size: cover;
-      background-image: url('/public/img/profile/z.jpg'); }
+      /*   background-size: cover;
+             background-position: center;
+             background-image: url('/public/img/profile/adam-home.jpg');*/ }
+      [data-template="hero"] .hub-hero .hero-main video#bgvid {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        background: url(polina.jpg) no-repeat;
+        background-size: cover; }
       [data-template="hero"] .hub-hero .hero-main .overlay {
         position: absolute;
         top: 0;
+        right: 0;
         bottom: 0;
         left: 0;
-        right: 0;
-        /* background: #ffc200;*/
-        background: rgba(0, 0, 0, 0.4);
-        -webkit-transition: 0.5s;
-                transition: 0.5s;
-        /*  .hub-hero-txt {
-              color: #f4f4f4;
-              font-size: 45px;
-              text-align: center;*/ }
-        [data-template="hero"] .hub-hero .hero-main .overlay:hover {
-          background: rgba(0, 0, 0, 0.3); }
-          [data-template="hero"] .hub-hero .hero-main .overlay:hover .hero-main-p:hover {
-            background: #ffc200; }
-        [data-template="hero"] .hub-hero .hero-main .overlay i {
-          position: relative;
-          padding-top: 200px;
-          color: white;
-          font-size: 30px;
-          text-align: center;
-          width: 100%; }
+        background: rgba(0, 0, 0, 0.3); }
         [data-template="hero"] .hub-hero .hero-main .overlay .hero-main-tag {
           position: relative;
-          color: white;
-          font-size: 40px;
-          line-height: 50px;
-          margin: 0 auto;
-          text-align: center;
-          padding-top: 15px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay a {
-          text-decoration: none;
-          color: white; }
-          [data-template="hero"] .hub-hero .hero-main .overlay a .hero-main-p {
-            position: relative;
-            font-size: 15px;
-            line-height: 35px;
-            margin: 0 auto;
-            text-align: center;
-            margin-top: 15px;
-            padding-top: 5px;
-            width: 250px;
-            border: 1px solid white;
-            color: white;
-            cursor: pointer; }
-            [data-template="hero"] .hub-hero .hero-main .overlay a .hero-main-p i {
-              display: inline;
-              font-size: 15px;
-              line-height: 35px;
-              padding-left: 5px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay .tag {
-          position: absolute;
-          text-align: center;
-          top: 250px;
-          left: 0;
-          right: 0;
-          padding: 0 30px;
-          margin-bottom: 30px;
-          font-size: 40px;
-          line-height: 50px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay .about {
-          position: absolute;
-          text-align: center;
-          top: 350px;
-          left: 0;
-          right: 0;
-          padding: 0 30px;
-          margin-bottom: 30px;
-          font-size: 33px;
-          line-height: 45px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay .jump {
-          position: absolute;
-          text-align: center;
-          top: 450px;
-          font-size: 30px;
-          line-height: 45px;
-          color: white;
-          left: 0;
-          margin: 0 auto;
-          right: 0; }
-          [data-template="hero"] .hub-hero .hero-main .overlay .jump a {
-            text-decoration: none; }
-            [data-template="hero"] .hub-hero .hero-main .overlay .jump a span {
-              color: #EF5B82;
-              cursor: pointer; }
-              [data-template="hero"] .hub-hero .hero-main .overlay .jump a span:hover {
-                color: #D65476; }
-  [data-template="hero"] .pad {
-    padding: 0; }
-    [data-template="hero"] .pad .back-l-one, [data-template="hero"] .pad .back-l-two, [data-template="hero"] .pad .back-l-three {
-      position: relative;
-      height: 350px;
-      background-size: cover;
-      background-position: center;
-      background-image: url('/public/img/profile/z-work.jpg'); }
-      [data-template="hero"] .pad .back-l-one .overlay-small, [data-template="hero"] .pad .back-l-two .overlay-small, [data-template="hero"] .pad .back-l-three .overlay-small {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        /* background: #ffc200;*/
-        background: rgba(0, 0, 0, 0.4);
-        margin: 0 auto;
-        -webkit-transition: 0.5s;
-                transition: 0.5s; }
-        [data-template="hero"] .pad .back-l-one .overlay-small:hover, [data-template="hero"] .pad .back-l-two .overlay-small:hover, [data-template="hero"] .pad .back-l-three .overlay-small:hover {
-          background: rgba(0, 0, 0, 0.1); }
-          [data-template="hero"] .pad .back-l-one .overlay-small:hover .hero-p:hover, [data-template="hero"] .pad .back-l-two .overlay-small:hover .hero-p:hover, [data-template="hero"] .pad .back-l-three .overlay-small:hover .hero-p:hover {
-            cursor: pointer;
-            background: #ffc200; }
-        [data-template="hero"] .pad .back-l-one .overlay-small i, [data-template="hero"] .pad .back-l-two .overlay-small i, [data-template="hero"] .pad .back-l-three .overlay-small i {
-          position: relative;
-          padding-top: 110px;
-          color: white;
-          font-size: 20px;
-          text-align: center;
-          width: 100%; }
-        [data-template="hero"] .pad .back-l-one .overlay-small .hero-tag, [data-template="hero"] .pad .back-l-two .overlay-small .hero-tag, [data-template="hero"] .pad .back-l-three .overlay-small .hero-tag {
-          position: relative;
+          padding-top: 250px;
           color: white;
           font-size: 30px;
           line-height: 40px;
+          text-align: center; }
+        [data-template="hero"] .hub-hero .hero-main .overlay .hero-main-tag-p {
+          position: relative;
+          padding-top: 50px;
+          color: white;
+          font-size: 20px;
+          line-height: 30px;
+          text-align: center; }
+    [data-template="hero"] .hub-hero .pad {
+      padding: 0; }
+      [data-template="hero"] .hub-hero .pad .back-l-one, [data-template="hero"] .hub-hero .pad .back-l-two, [data-template="hero"] .hub-hero .pad .back-l-three {
+        position: relative;
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+        background-image: none; }
+        [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          /* background: #ffc200;*/
+          background: rgba(0, 0, 0, 0.6);
           margin: 0 auto;
-          text-align: center;
-          padding-top: 15px; }
-        [data-template="hero"] .pad .back-l-one .overlay-small a, [data-template="hero"] .pad .back-l-two .overlay-small a, [data-template="hero"] .pad .back-l-three .overlay-small a {
-          text-decoration: none;
-          color: white; }
-          [data-template="hero"] .pad .back-l-one .overlay-small a .hero-p, [data-template="hero"] .pad .back-l-two .overlay-small a .hero-p, [data-template="hero"] .pad .back-l-three .overlay-small a .hero-p {
+          -webkit-transition: 0.5s;
+                  transition: 0.5s; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover {
+            background: rgba(0, 0, 0, 0.4); }
+            [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover a, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover a, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover a {
+              text-decoration: none; }
+              [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover a .hero-p:hover, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover a .hero-p:hover, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover a .hero-p:hover {
+                cursor: pointer;
+                background: #ffc200; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small i, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small i, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small i {
             position: relative;
-            font-size: 12px;
-            line-height: 25px;
+            padding-top: 110px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            width: 100%; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small .hero-tag, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small .hero-tag, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small .hero-tag {
+            position: relative;
+            color: white;
+            font-size: 30px;
+            line-height: 40px;
             margin: 0 auto;
             text-align: center;
-            margin-top: 15px;
-            padding-top: 5px;
-            width: 200px;
-            border: 1px solid white;
-            color: white;
-            cursor: pointer; }
-            [data-template="hero"] .pad .back-l-one .overlay-small a .hero-p i, [data-template="hero"] .pad .back-l-two .overlay-small a .hero-p i, [data-template="hero"] .pad .back-l-three .overlay-small a .hero-p i {
-              display: inline;
-              font-size: 11px;
+            padding-top: 15px; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a {
+            text-decoration: none;
+            color: white; }
+            [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a .hero-p, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a .hero-p, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a .hero-p {
+              position: relative;
+              font-size: 12px;
               line-height: 25px;
-              padding-left: 5px; }
-    [data-template="hero"] .pad .back-l-two {
-      background-image: url('/public/img/profile/z-listen.jpg'); }
-    [data-template="hero"] .pad .back-l-three {
-      background-image: url('/public/img/profile/z-surf-two.jpg'); } }
+              margin: 0 auto;
+              text-align: center;
+              margin-top: 15px;
+              padding-top: 5px;
+              width: 200px;
+              border: 1px solid white;
+              color: white;
+              cursor: pointer; }
+              [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a .hero-p i, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a .hero-p i, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a .hero-p i {
+                display: inline;
+                font-size: 11px;
+                line-height: 25px;
+                padding-left: 5px; }
+      [data-template="hero"] .hub-hero .pad .back-l-two {
+        background-image: none; }
+      [data-template="hero"] .hub-hero .pad .back-l-three {
+        background-image: none; } }
 
 @media (max-width: 767px) {
   [data-template="hero"] .hub-hero {
-    height: 1650px;
+    height: 950px;
     position: relative; }
-    [data-template="hero"] .hub-hero .lightbox {
-      /** Hide the lightbox */
-      display: none;
-      /** Apply basic lightbox styling */
-      position: fixed;
-      z-index: 9999;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      color: #333333;
-      background: rgba(255, 255, 255, 0.6); }
-    [data-template="hero"] .hub-hero .lightbox:after {
-      content: '';
-      display: table;
-      clear: both; }
-    [data-template="hero"] .hub-hero .lightbox .box {
-      width: -webkit-min-content;
-      width: -moz-min-content;
-      width: min-content;
-      min-width: 300px;
-      margin: 20px auto;
-      padding: 20px;
-      top: 25%;
-      background-color: rgba(0, 0, 0, 0.7);
-      box-shadow: 0px 1px 26px -3px #777777; }
-    [data-template="hero"] .hub-hero .lightbox .title {
-      margin: 0;
-      padding: 0 0 10px 0;
-      border-bottom: 1px #ccc solid;
-      font-size: 22px;
-      color: white;
-      text-align: center; }
-    [data-template="hero"] .hub-hero .lightbox .content {
-      display: block;
-      padding: 25px 0 0 0;
-      font-size: 18px;
-      line-height: 22px;
-      text-align: center;
-      color: white; }
-      [data-template="hero"] .hub-hero .lightbox .content span {
-        color: #00d4b4; }
-      [data-template="hero"] .hub-hero .lightbox .content image {
-        width: 100%;
-        height: auto; }
-    [data-template="hero"] .hub-hero .lightbox .close {
-      float: right;
-      display: block;
-      text-decoration: none;
-      font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 22px;
-      color: white; }
-      [data-template="hero"] .hub-hero .lightbox .close i {
-        color: white; }
-    [data-template="hero"] .hub-hero .lightbox .open {
-      /** Show lightbox when mouse leaves the browser window */
-      display: block;
-      outline: none; }
-    [data-template="hero"] .hub-hero #mc_embed_signup {
-      background: none;
-      clear: left;
-      font-size: 14px;
-      display: block;
-      margin-top: 20px;
-      margin-bottom: 20px; }
-    [data-template="hero"] .hub-hero #mc_embed_signup .mc-field-group input {
-      background: white;
-      height: 40px;
-      font-size: 15px;
-      padding-top: 11px;
-      width: 300px;
-      margin: 0 auto;
-      color: grey; }
-    [data-template="hero"] .hub-hero #mc_embed_signup .mc-field-group {
-      clear: left;
-      position: relative;
-      padding-bottom: 3%;
-      min-height: 50px; }
-    [data-template="hero"] .hub-hero #mc_embed_signup_scroll {
-      width: 300px;
-      margin: 0 auto; }
-    [data-template="hero"] .hub-hero #mc_embed_signup input.button {
-      clear: both;
-      background: #00d4b4;
-      color: white;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 15px;
-      font-weight: bold;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      text-decoration: none;
-      vertical-align: top;
-      white-space: nowrap;
-      width: 300px;
-      margin: 0 auto; }
-      [data-template="hero"] .hub-hero #mc_embed_signup input.button:hover {
-        background: #00d4b4; }
-    [data-template="hero"] .hub-hero #mc_embed_signup div.mce_inline_error {
-      padding: 5px 10px;
-      width: 300px;
-      background-color: #EF3A5D;
-      font-weight: bold;
-      z-index: 1;
-      color: #fff; }
-    [data-template="hero"] .hub-hero #mc_embed_signup #mce-success-response {
-      color: grey;
-      font-size: 10px;
-      text-align: center;
-      display: none;
-      background: none;
-      width: 100%;
-      padding: 0 0; }
-    [data-template="hero"] .hub-hero #mc_embed_signup div#mce-responses {
-      float: left;
-      top: -1.4em;
-      overflow: hidden;
-      width: 100%;
-      margin: 0;
-      clear: both;
-      padding: 0 10px; }
-    [data-template="hero"] .hub-hero #mc_embed_signup form {
-      display: block;
-      position: relative;
-      text-align: left;
-      padding: 0; }
     [data-template="hero"] .hub-hero .hero-main {
-      height: 600px;
+      height: 650px;
       position: relative;
-      background-position: center;
       background-size: cover;
-      background-image: url('/public/img/profile/z.jpg'); }
+      background-position: center;
+      background-image: url('/public/img/profile/adam-home.jpg'); }
+      [data-template="hero"] .hub-hero .hero-main video#bgvid {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        background: url(polina.jpg) no-repeat;
+        background-size: cover; }
       [data-template="hero"] .hub-hero .hero-main .overlay {
         position: absolute;
         top: 0;
+        right: 0;
         bottom: 0;
         left: 0;
-        right: 0;
-        /* background: #ffc200;*/
-        background: rgba(0, 0, 0, 0.4);
-        -webkit-transition: 0.5s;
-                transition: 0.5s;
-        /*  .hub-hero-txt {
-              color: #f4f4f4;
-              font-size: 45px;
-              text-align: center;*/ }
-        [data-template="hero"] .hub-hero .hero-main .overlay:hover {
-          background: rgba(0, 0, 0, 0.1); }
-          [data-template="hero"] .hub-hero .hero-main .overlay:hover .hero-main-p:hover {
-            background: #ffc200; }
-        [data-template="hero"] .hub-hero .hero-main .overlay i {
-          position: relative;
-          padding-top: 200px;
-          color: white;
-          font-size: 30px;
-          text-align: center;
-          width: 100%; }
+        background: rgba(0, 0, 0, 0.3); }
         [data-template="hero"] .hub-hero .hero-main .overlay .hero-main-tag {
           position: relative;
-          color: white;
-          font-size: 40px;
-          line-height: 50px;
-          margin: 0 auto;
-          text-align: center;
-          padding-top: 15px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay a {
-          text-decoration: none;
-          color: white; }
-          [data-template="hero"] .hub-hero .hero-main .overlay a .hero-main-p {
-            position: relative;
-            font-size: 15px;
-            line-height: 35px;
-            margin: 0 auto;
-            text-align: center;
-            margin-top: 15px;
-            padding-top: 5px;
-            width: 250px;
-            border: 1px solid white;
-            color: white;
-            cursor: pointer; }
-            [data-template="hero"] .hub-hero .hero-main .overlay a .hero-main-p i {
-              display: inline;
-              font-size: 15px;
-              line-height: 35px;
-              padding-left: 5px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay .tag {
-          position: absolute;
-          text-align: center;
-          top: 250px;
-          left: 0;
-          right: 0;
-          padding: 0 30px;
-          margin-bottom: 30px;
-          font-size: 40px;
-          line-height: 50px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay .about {
-          position: absolute;
-          text-align: center;
-          top: 350px;
-          left: 0;
-          right: 0;
-          padding: 0 30px;
-          margin-bottom: 30px;
-          font-size: 33px;
-          line-height: 45px; }
-        [data-template="hero"] .hub-hero .hero-main .overlay .jump {
-          position: absolute;
-          text-align: center;
-          top: 450px;
-          font-size: 30px;
-          line-height: 45px;
-          color: white;
-          left: 0;
-          margin: 0 auto;
-          right: 0; }
-          [data-template="hero"] .hub-hero .hero-main .overlay .jump a {
-            text-decoration: none; }
-            [data-template="hero"] .hub-hero .hero-main .overlay .jump a span {
-              color: #EF5B82;
-              cursor: pointer; }
-              [data-template="hero"] .hub-hero .hero-main .overlay .jump a span:hover {
-                color: #D65476; }
-  [data-template="hero"] .pad {
-    padding: 0; }
-    [data-template="hero"] .pad .back-l-one, [data-template="hero"] .pad .back-l-two, [data-template="hero"] .pad .back-l-three {
-      position: relative;
-      height: 350px;
-      background-size: cover;
-      background-position: center;
-      background-image: url('/public/img/profile/z-work.jpg'); }
-      [data-template="hero"] .pad .back-l-one .overlay-small, [data-template="hero"] .pad .back-l-two .overlay-small, [data-template="hero"] .pad .back-l-three .overlay-small {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        /* background: #ffc200;*/
-        background: rgba(0, 0, 0, 0.4);
-        margin: 0 auto;
-        -webkit-transition: 0.5s;
-                transition: 0.5s; }
-        [data-template="hero"] .pad .back-l-one .overlay-small:hover, [data-template="hero"] .pad .back-l-two .overlay-small:hover, [data-template="hero"] .pad .back-l-three .overlay-small:hover {
-          background: rgba(0, 0, 0, 0.1); }
-          [data-template="hero"] .pad .back-l-one .overlay-small:hover .hero-p:hover, [data-template="hero"] .pad .back-l-two .overlay-small:hover .hero-p:hover, [data-template="hero"] .pad .back-l-three .overlay-small:hover .hero-p:hover {
-            cursor: pointer;
-            background: #ffc200; }
-        [data-template="hero"] .pad .back-l-one .overlay-small i, [data-template="hero"] .pad .back-l-two .overlay-small i, [data-template="hero"] .pad .back-l-three .overlay-small i {
-          position: relative;
-          padding-top: 110px;
-          color: white;
-          font-size: 20px;
-          text-align: center;
-          width: 100%; }
-        [data-template="hero"] .pad .back-l-one .overlay-small .hero-tag, [data-template="hero"] .pad .back-l-two .overlay-small .hero-tag, [data-template="hero"] .pad .back-l-three .overlay-small .hero-tag {
-          position: relative;
+          padding-top: 250px;
           color: white;
           font-size: 30px;
           line-height: 40px;
+          text-align: center; }
+        [data-template="hero"] .hub-hero .hero-main .overlay .hero-main-tag-p {
+          position: relative;
+          padding-top: 50px;
+          color: white;
+          font-size: 20px;
+          line-height: 30px;
+          text-align: center; }
+    [data-template="hero"] .hub-hero .pad {
+      padding: 0; }
+      [data-template="hero"] .hub-hero .pad .back-l-one, [data-template="hero"] .hub-hero .pad .back-l-two, [data-template="hero"] .hub-hero .pad .back-l-three {
+        position: relative;
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+        background-image: none; }
+        [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          /* background: #ffc200;*/
+          background: rgba(0, 0, 0, 0.7);
           margin: 0 auto;
-          text-align: center;
-          padding-top: 15px; }
-        [data-template="hero"] .pad .back-l-one .overlay-small a, [data-template="hero"] .pad .back-l-two .overlay-small a, [data-template="hero"] .pad .back-l-three .overlay-small a {
-          text-decoration: none;
-          color: white; }
-          [data-template="hero"] .pad .back-l-one .overlay-small a .hero-p, [data-template="hero"] .pad .back-l-two .overlay-small a .hero-p, [data-template="hero"] .pad .back-l-three .overlay-small a .hero-p {
+          -webkit-transition: 0.5s;
+                  transition: 0.5s; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover {
+            background: rgba(0, 0, 0, 0.4); }
+            [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover a, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover a, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover a {
+              text-decoration: none; }
+              [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small:hover a .hero-p:hover, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small:hover a .hero-p:hover, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small:hover a .hero-p:hover {
+                cursor: pointer;
+                background: #ffc200; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small i, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small i, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small i {
             position: relative;
-            font-size: 12px;
-            line-height: 25px;
+            padding-top: 110px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            width: 100%; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small .hero-tag, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small .hero-tag, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small .hero-tag {
+            position: relative;
+            color: white;
+            font-size: 30px;
+            line-height: 40px;
             margin: 0 auto;
             text-align: center;
-            margin-top: 15px;
-            padding-top: 5px;
-            width: 200px;
-            border: 1px solid white;
-            color: white;
-            cursor: pointer; }
-            [data-template="hero"] .pad .back-l-one .overlay-small a .hero-p i, [data-template="hero"] .pad .back-l-two .overlay-small a .hero-p i, [data-template="hero"] .pad .back-l-three .overlay-small a .hero-p i {
-              display: inline;
-              font-size: 11px;
+            padding-top: 15px; }
+          [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a {
+            text-decoration: none;
+            color: white; }
+            [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a .hero-p, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a .hero-p, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a .hero-p {
+              position: relative;
+              font-size: 12px;
               line-height: 25px;
-              padding-left: 5px; }
-    [data-template="hero"] .pad .back-l-two {
-      background-image: url('/public/img/profile/z-listen.jpg'); }
-    [data-template="hero"] .pad .back-l-three {
-      background-image: url('/public/img/profile/z-surf-two.jpg'); } }
+              margin: 0 auto;
+              text-align: center;
+              margin-top: 15px;
+              padding-top: 5px;
+              width: 200px;
+              border: 1px solid white;
+              color: white;
+              cursor: pointer; }
+              [data-template="hero"] .hub-hero .pad .back-l-one .overlay-small a .hero-p i, [data-template="hero"] .hub-hero .pad .back-l-two .overlay-small a .hero-p i, [data-template="hero"] .hub-hero .pad .back-l-three .overlay-small a .hero-p i {
+                display: inline;
+                font-size: 11px;
+                line-height: 25px;
+                padding-left: 5px; }
+      [data-template="hero"] .hub-hero .pad .back-l-two {
+        background-image: none; }
+      [data-template="hero"] .hub-hero .pad .back-l-three {
+        background-image: none; } }
 
 [data-template="project-post"] .project-post {
   position: relative; }
