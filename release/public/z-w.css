@@ -927,6 +927,8 @@ a {
       background-image: url("/public/img/projects/b3dhead.jpg"); }
     [data-template="project-post"] .project-post .pad .hwdy {
       background-image: url("/public/img/projects/hwdy.jpg"); }
+    [data-template="project-post"] .project-post .pad .pidentify {
+      background-image: url("/public/img/projects/pidentify.jpg"); }
     [data-template="project-post"] .project-post .pad .alumnow {
       background-image: url("/public/img/projects/alumnow.jpg"); }
     [data-template="project-post"] .project-post .pad .hat {
@@ -7596,7 +7598,7 @@ a {
 [data-template="common-pence"] .common-pence-hero {
   position: relative;
   height: 650px;
-  background-image: url('/public/img/projects/background-cp.jpg');
+  background-image: url('/public/img/projects/alumnow.jpg');
   background-position: center;
   background-size: cover; }
   [data-template="common-pence"] .common-pence-hero .overlay-common-pence {
@@ -7997,20 +7999,20 @@ a {
       width: 100%;
       height: auto; } }
 
-[data-template="common-pence"] .common-pence-hero {
+[data-template="money-honey"] .money-hero {
   position: relative;
   height: 650px;
-  background-image: url('/public/img/projects/background-cp.jpg');
+  background-image: url('/public/img/projects/pidentify.jpg');
   background-position: center;
   background-size: cover; }
-  [data-template="common-pence"] .common-pence-hero .overlay-common-pence {
+  [data-template="money-honey"] .money-hero .overlay-money {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.3); }
-    [data-template="common-pence"] .common-pence-hero .overlay-common-pence .product-title {
+    [data-template="money-honey"] .money-hero .overlay-money .product-title {
       position: relative;
       font-size: 50px;
       color: white;
@@ -8018,10 +8020,10 @@ a {
       text-align: center;
       margin: 0 auto;
       padding-top: 250px; }
-    [data-template="common-pence"] .common-pence-hero .overlay-common-pence a {
+    [data-template="money-honey"] .money-hero .overlay-money a {
       text-decoration: none;
       color: white; }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p {
+      [data-template="money-honey"] .money-hero .overlay-money a .lifestyle-p {
         position: relative;
         font-size: 15px;
         line-height: 35px;
@@ -8033,48 +8035,48 @@ a {
         border: 1px solid white;
         color: white;
         cursor: pointer; }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p i {
+        [data-template="money-honey"] .money-hero .overlay-money a .lifestyle-p i {
           display: inline;
           padding-left: 5px;
           font-size: 15px;
           line-height: 35px;
           color: white; }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p:hover {
+        [data-template="money-honey"] .money-hero .overlay-money a .lifestyle-p:hover {
           background: #ffc200; }
-    [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social {
+    [data-template="money-honey"] .money-hero .overlay-money .blog-post-social {
       position: relative;
       text-align: center;
       margin: 0 auto;
       padding-top: 20px; }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a {
+      [data-template="money-honey"] .money-hero .overlay-money .blog-post-social a {
         margin: 0 10px;
         padding: 10px 2px;
         text-decoration: none;
         background: #486dab; }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a:hover {
+        [data-template="money-honey"] .money-hero .overlay-money .blog-post-social a:hover {
           border-bottom: 5px solid rgba(0, 0, 0, 0.5); }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a i {
+        [data-template="money-honey"] .money-hero .overlay-money .blog-post-social a i {
           display: inline-block;
           font-size: 15px;
           margin: 0 14px;
           color: white;
           margin-top: 25px;
           cursor: pointer; }
-[data-template="common-pence"] .common-pence-what {
+[data-template="money-honey"] .money-what {
   position: relative; }
-  [data-template="common-pence"] .common-pence-what .common-pence-what-title {
+  [data-template="money-honey"] .money-what .money-what-title {
     font-size: 40px;
     line-height: 50px;
     padding: 100px 50px 50px 50px;
     text-align: center; }
-  [data-template="common-pence"] .common-pence-what .common-pence-what-tag {
+  [data-template="money-honey"] .money-what .money-what-tag {
     font-size: 20px;
     line-height: 30px;
     margin: 0 auto;
     width: 700px;
     text-align: center;
     padding-bottom: 50px; }
-[data-template="common-pence"] .break-title {
+[data-template="money-honey"] .break-title {
   position: relative;
   font-size: 15px;
   line-height: 25px;
@@ -8087,319 +8089,187 @@ a {
   border: 1px solid grey;
   padding-top: 5px;
   background: white; }
-[data-template="common-pence"] .line {
+[data-template="money-honey"] .line {
   height: 1px;
   background: grey;
   position: absolute;
   top: 68px;
   left: 15px;
   right: 15px; }
-[data-template="common-pence"] .why-icon {
+[data-template="money-honey"] .why-icon {
   font-size: 25px;
   color: grey;
   text-align: center;
   padding-top: 50px;
   margin: 0 auto; }
-  [data-template="common-pence"] .why-icon img {
+  [data-template="money-honey"] .why-icon img {
     width: 200px;
     height: auto; }
-[data-template="common-pence"] .why-title {
+[data-template="money-honey"] .why-title {
   font-size: 40px;
   line-height: 50px;
   padding: 25px 50px 25px 50px;
   text-align: center; }
-[data-template="common-pence"] .why-tag {
+[data-template="money-honey"] .why-tag {
   font-size: 18px;
   line-height: 28px;
   margin: 0 auto;
   width: 350px;
   text-align: center;
   padding-bottom: 100px; }
-[data-template="common-pence"] .pad {
+[data-template="money-honey"] .pad {
   padding: 0; }
-  [data-template="common-pence"] .pad .break-image {
+  [data-template="money-honey"] .pad .break-image {
     position: relative;
     height: 600px;
-    background-image: url('/public/img/projects/cp-filler.jpg');
+    background-image: url('/public/img/projects/pidentify.jpg');
     background-position: center;
     background-size: cover; }
-[data-template="common-pence"] .logo-n {
+[data-template="money-honey"] .logo-n {
   width: 75%;
   margin: 0 auto;
   position: relative;
   background-size: cover;
   background-position: center; }
-  [data-template="common-pence"] .logo-n img {
+  [data-template="money-honey"] .logo-n img {
     width: 100%;
     height: auto; }
 
-@media (max-width: 991px) {
-  [data-template="common-pence"] .common-pence-hero {
-    position: relative;
-    height: 650px;
-    background-image: url('/public/img/projects/background-cp.jpg');
-    background-position: center;
-    background-size: cover; }
-    [data-template="common-pence"] .common-pence-hero .overlay-common-pence {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.3); }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence .product-title {
+[data-template="jas-man"] .jas-man-hero {
+  position: relative;
+  height: 650px;
+  background-image: url('/public/img/projects/got.jpg');
+  background-position: center;
+  background-size: cover; }
+  [data-template="jas-man"] .jas-man-hero .overlay-jas-man {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3); }
+    [data-template="jas-man"] .jas-man-hero .overlay-jas-man .product-title {
+      position: relative;
+      font-size: 50px;
+      color: white;
+      line-height: 60px;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 250px; }
+    [data-template="jas-man"] .jas-man-hero .overlay-jas-man a {
+      text-decoration: none;
+      color: white; }
+      [data-template="jas-man"] .jas-man-hero .overlay-jas-man a .lifestyle-p {
         position: relative;
-        font-size: 40px;
-        color: white;
-        line-height: 50px;
-        text-align: center;
+        font-size: 15px;
+        line-height: 35px;
         margin: 0 auto;
-        padding-top: 250px; }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence a {
-        text-decoration: none;
-        color: white; }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p {
-          position: relative;
+        text-align: center;
+        margin-top: 15px;
+        padding-top: 5px;
+        width: 250px;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer; }
+        [data-template="jas-man"] .jas-man-hero .overlay-jas-man a .lifestyle-p i {
+          display: inline;
+          padding-left: 5px;
           font-size: 15px;
           line-height: 35px;
-          margin: 0 auto;
-          text-align: center;
-          margin-top: 15px;
-          padding-top: 5px;
-          width: 250px;
-          border: 1px solid white;
-          color: white;
-          cursor: pointer; }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p i {
-            display: inline;
-            padding-left: 5px;
-            font-size: 15px;
-            line-height: 35px;
-            color: white; }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p:hover {
-            background: #ffc200; }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social {
-        position: relative;
-        text-align: center;
-        margin: 0 auto;
-        padding-top: 20px; }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a {
-          margin: 0 10px;
-          padding: 10px 2px;
-          text-decoration: none;
-          background: #486dab; }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a:hover {
-            border-bottom: 5px solid rgba(0, 0, 0, 0.5); }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a i {
-            display: inline-block;
-            font-size: 15px;
-            margin: 0 14px;
-            color: white;
-            margin-top: 25px;
-            cursor: pointer; }
-  [data-template="common-pence"] .common-pence-what {
-    position: relative; }
-    [data-template="common-pence"] .common-pence-what .common-pence-what-title {
-      font-size: 40px;
-      line-height: 50px;
-      padding: 100px 50px 50px 50px;
-      text-align: center; }
-    [data-template="common-pence"] .common-pence-what .common-pence-what-tag {
-      font-size: 20px;
-      line-height: 30px;
-      margin: 0 auto;
-      width: 500px;
+          color: white; }
+        [data-template="jas-man"] .jas-man-hero .overlay-jas-man a .lifestyle-p:hover {
+          background: #ffc200; }
+    [data-template="jas-man"] .jas-man-hero .overlay-jas-man .blog-post-social {
+      position: relative;
       text-align: center;
-      padding-bottom: 50px; }
-  [data-template="common-pence"] .break-title {
-    position: relative;
-    font-size: 15px;
-    line-height: 25px;
-    width: 200px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: grey;
-    border: 1px solid grey;
-    padding-top: 5px;
-    background: white; }
-  [data-template="common-pence"] .line {
-    height: 1px;
-    background: grey;
-    position: absolute;
-    top: 18px;
-    left: 15px;
-    right: 15px; }
-  [data-template="common-pence"] .why-icon {
-    font-size: 25px;
-    color: grey;
-    text-align: center;
-    padding-top: 50px;
-    margin: 0 auto; }
-  [data-template="common-pence"] .why-title {
+      margin: 0 auto;
+      padding-top: 20px; }
+      [data-template="jas-man"] .jas-man-hero .overlay-jas-man .blog-post-social a {
+        margin: 0 10px;
+        padding: 10px 2px;
+        text-decoration: none;
+        background: #486dab; }
+        [data-template="jas-man"] .jas-man-hero .overlay-jas-man .blog-post-social a:hover {
+          border-bottom: 5px solid rgba(0, 0, 0, 0.5); }
+        [data-template="jas-man"] .jas-man-hero .overlay-jas-man .blog-post-social a i {
+          display: inline-block;
+          font-size: 15px;
+          margin: 0 14px;
+          color: white;
+          margin-top: 25px;
+          cursor: pointer; }
+[data-template="jas-man"] .jas-man-what {
+  position: relative; }
+  [data-template="jas-man"] .jas-man-what .common-pence-what-title {
     font-size: 40px;
     line-height: 50px;
-    padding: 25px 50px 25px 50px;
+    padding: 100px 50px 50px 50px;
     text-align: center; }
-  [data-template="common-pence"] .why-tag {
-    font-size: 18px;
-    line-height: 28px;
+  [data-template="jas-man"] .jas-man-what .jas-man-what-tag {
+    font-size: 20px;
+    line-height: 30px;
     margin: 0 auto;
-    width: 500px;
+    width: 700px;
     text-align: center;
-    padding-bottom: 100px; }
-  [data-template="common-pence"] .pad {
-    padding: 0; }
-    [data-template="common-pence"] .pad .break-image {
-      position: relative;
-      height: 600px;
-      background-image: url('/public/img/projects/cp-filler.jpg');
-      background-position: center;
-      background-size: cover; }
-  [data-template="common-pence"] .logo-n {
-    width: 25%;
-    margin: 0 auto;
+    padding-bottom: 50px; }
+[data-template="jas-man"] .break-title {
+  position: relative;
+  font-size: 15px;
+  line-height: 25px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: grey;
+  border: 1px solid grey;
+  padding-top: 5px;
+  background: white; }
+[data-template="jas-man"] .line {
+  height: 1px;
+  background: grey;
+  position: absolute;
+  top: 68px;
+  left: 15px;
+  right: 15px; }
+[data-template="jas-man"] .why-icon {
+  font-size: 25px;
+  color: grey;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0 auto; }
+  [data-template="jas-man"] .why-icon img {
+    width: 200px;
+    height: auto; }
+[data-template="jas-man"] .why-title {
+  font-size: 40px;
+  line-height: 50px;
+  padding: 25px 50px 25px 50px;
+  text-align: center; }
+[data-template="jas-man"] .why-tag {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 auto;
+  width: 350px;
+  text-align: center;
+  padding-bottom: 100px; }
+[data-template="jas-man"] .pad {
+  padding: 0; }
+  [data-template="jas-man"] .pad .break-image {
     position: relative;
-    background-size: cover;
-    background-position: center; }
-    [data-template="common-pence"] .logo-n img {
-      width: 100%;
-      height: auto; } }
-
-@media (max-width: 767px) {
-  [data-template="common-pence"] .common-pence-hero {
-    position: relative;
-    height: 650px;
-    background-image: url('/public/img/projects/background-cp.jpg');
+    height: 600px;
+    background-image: url('/public/img/projects/got2.jpg');
     background-position: center;
     background-size: cover; }
-    [data-template="common-pence"] .common-pence-hero .overlay-common-pence {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.3); }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence .product-title {
-        position: relative;
-        font-size: 40px;
-        color: white;
-        line-height: 50px;
-        text-align: center;
-        margin: 0 auto;
-        padding-top: 250px; }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence a {
-        text-decoration: none;
-        color: white; }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p {
-          position: relative;
-          font-size: 15px;
-          line-height: 35px;
-          margin: 0 auto;
-          text-align: center;
-          margin-top: 15px;
-          padding-top: 5px;
-          width: 250px;
-          border: 1px solid white;
-          color: white;
-          cursor: pointer; }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p i {
-            display: inline;
-            padding-left: 5px;
-            font-size: 15px;
-            line-height: 35px;
-            color: white; }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence a .lifestyle-p:hover {
-            background: #ffc200; }
-      [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social {
-        position: relative;
-        text-align: center;
-        margin: 0 auto;
-        padding-top: 20px; }
-        [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a {
-          margin: 0 10px;
-          padding: 10px 2px;
-          text-decoration: none;
-          background: #486dab; }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a:hover {
-            border-bottom: 5px solid rgba(0, 0, 0, 0.5); }
-          [data-template="common-pence"] .common-pence-hero .overlay-common-pence .blog-post-social a i {
-            display: inline-block;
-            font-size: 15px;
-            margin: 0 14px;
-            color: white;
-            margin-top: 25px;
-            cursor: pointer; }
-  [data-template="common-pence"] .common-pence-what {
-    position: relative; }
-    [data-template="common-pence"] .common-pence-what .common-pence-what-title {
-      font-size: 30px;
-      line-height: 40px;
-      padding: 100px 20px 50px 20px;
-      text-align: center; }
-    [data-template="common-pence"] .common-pence-what .common-pence-what-tag {
-      font-size: 20px;
-      line-height: 30px;
-      margin: 0 auto;
-      width: 300px;
-      text-align: center;
-      padding-bottom: 50px; }
-  [data-template="common-pence"] .break-title {
-    position: relative;
-    font-size: 15px;
-    line-height: 25px;
-    width: 200px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: grey;
-    border: 1px solid grey;
-    padding-top: 5px;
-    background: white; }
-  [data-template="common-pence"] .line {
-    height: 1px;
-    background: grey;
-    position: absolute;
-    top: 18px;
-    left: 15px;
-    right: 15px; }
-  [data-template="common-pence"] .why-icon {
-    font-size: 25px;
-    color: grey;
-    text-align: center;
-    padding-top: 50px;
-    margin: 0 auto; }
-  [data-template="common-pence"] .why-title {
-    font-size: 40px;
-    line-height: 50px;
-    padding: 25px 50px 25px 50px;
-    text-align: center; }
-  [data-template="common-pence"] .why-tag {
-    font-size: 18px;
-    line-height: 28px;
-    margin: 0 auto;
-    width: 300px;
-    text-align: center;
-    padding-bottom: 100px; }
-  [data-template="common-pence"] .pad {
-    padding: 0; }
-    [data-template="common-pence"] .pad .break-image {
-      position: relative;
-      height: 600px;
-      background-image: url('/public/img/projects/cp-filler.jpg');
-      background-position: center;
-      background-size: cover; }
-  [data-template="common-pence"] .logo-n {
-    width: 50%;
-    margin: 0 auto;
-    position: relative;
-    background-size: cover;
-    background-position: center; }
-    [data-template="common-pence"] .logo-n img {
-      width: 100%;
-      height: auto; } }
+[data-template="jas-man"] .logo-n {
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover;
+  background-position: center; }
+  [data-template="jas-man"] .logo-n img {
+    width: 100%;
+    height: auto; }
 
 [data-template="blog-post-004"] .blog-post-hero {
   position: relative;

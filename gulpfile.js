@@ -75,24 +75,25 @@ gulp.task("copy-public", function(){
 gulp.task("gen-html", function(){
     var pages = {
         index: ['head', 'menu', 'header', 'hero', 'footer'],
-        products: ['head-products', 'menu', 'header', 'project-post', 'hero-recent', 'hero-recent-post', 'email',  'code-banner', 'footer'],
-        "products/common-pence": ['head-commonpence', 'menu', 'header', 'common-pence', 'hero-recent', 'hero-recent-post', 'email',  'code-banner', 'footer'],
-        collaborate: ['head', 'menu', 'header', 'collaborate', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer'],
+        products: ['head-products', 'menu', 'header', 'project-post', 'footer'],
+        "products/common-pence": ['head-commonpence', 'menu', 'header', 'common-pence', 'footer'],
+        "products/money-honey": ['head-money-honey', 'menu', 'header', 'money-honey', 'footer'],
+        "products/jas-man": ['head-money-honey', 'menu', 'header', 'jas-man', 'footer'],
         bio: ['head-life', 'menu', 'header','bio-hero','bio', 'bio-fill' , 'bio-ed', 'bio-fill-two', 'bio-skill', 'bio-fill-three', 'bio-work', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email', 'code-banner', 'footer'],
         press: ['head-press', 'menu', 'header', 'press-hero', 'press', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email', 'code-banner', 'footer'],
-        podcast: ['head-podcast', 'menu', 'header', 'podcast-hero', 'email-podcast', 'podcast-content', 'hero-recent-project', 'hero-recent-post', 'code-banner',  'footer'],
+        podcast: ['head-podcast', 'menu', 'header', 'podcast-hero', 'podcast-content', 'footer'],
         advertise: ['head-ad', 'menu', 'header', 'advertise','email-ad', 'hero-recent', 'hero-recent-project', 'hero-recent-post',  'code-banner','footer'],
-        lifestyle: ['head-lifestyle', 'menu', 'header', 'lifestyle-hero', 'lifestyle-blog', 'email-health', 'hero-recent', 'hero-recent-project', 'code-banner', 'footer'],
-        "podcast/nathan": ['head-podcast-nathan', 'menu', 'header', 'podcast-page-nathan', 'hero-recent', 'hero-recent-post','email-podcast', 'code-banner', 'footer'],
-        "podcast/adam": ['head-podcast-adam', 'menu', 'header', 'podcast-page-adam', 'hero-recent', 'hero-recent-post','email-podcast', 'code-banner', 'footer'],
-        "podcast/amelia": ['head-podcast-amelia', 'menu', 'header', 'podcast-page-amelia', 'hero-recent', 'hero-recent-post','email-podcast', 'code-banner', 'footer'],
-        "podcast/startups-startlines": ['head-podcast-001', 'menu', 'header', 'podcast-page-zander-01', 'hero-recent', 'hero-recent-post','email-podcast', 'code-banner', 'footer'],
-        blog: ['head-blog', 'menu', 'header', 'blog-hero', 'blog-post', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer'],
+        lifestyle: ['head-lifestyle', 'menu', 'header', 'lifestyle-hero', 'lifestyle-blog', 'footer'],
+        "podcast/nathan": ['head-podcast-nathan', 'menu', 'header', 'podcast-page-nathan', 'footer'],
+        "podcast/adam": ['head-podcast-adam', 'menu', 'header', 'podcast-page-adam', 'footer'],
+        "podcast/amelia": ['head-podcast-amelia', 'menu', 'header', 'podcast-page-amelia', 'footer'],
+        "podcast/startups-startlines": ['head-podcast-001', 'menu', 'header', 'podcast-page-zander-01','footer'],
+        blog: ['head-blog', 'menu', 'header', 'blog-hero', 'blog-post', 'footer'],
         "blog/why-i-turned-down-a-job-at-google": ['head-blog-001', 'menu', 'header', 'blog-post-001', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer'],
-        "blog/hit-crowdfunding-goal": ['head-blog-002', 'menu', 'header', 'blog-post-002', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer'],
+        "blog/hit-crowdfunding-goal": ['head-blog-002', 'menu', 'header', 'blog-post-002', 'footer'],
         "blog/crash-film-premiere": ['head-blog-003', 'menu', 'header', 'blog-post-003', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer'],
-        "blog/flat-icon": ['head-blog-004', 'menu', 'header', 'blog-post-004', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer'],
-        "blog/develop-and-monetize-your-digital-presence": ['head-blog-004', 'menu', 'header', 'blog-post-005', 'hero-recent', 'hero-recent-project', 'hero-recent-post', 'email',  'code-banner','footer']
+        "blog/flat-icon": ['head-blog-004', 'menu', 'header', 'blog-post-004', 'footer'],
+        "blog/develop-and-monetize-your-digital-presence": ['head-blog-004', 'menu', 'header', 'blog-post-005', 'footer']
 
     };
 
@@ -108,13 +109,6 @@ gulp.task("gen-html", function(){
             .pipe(gulp.dest (paths.release));
     }
 });
-
-//gulp.task('default', function () {
-//    gulp.src('index.md')
-//        .pipe(markdown())
-//        .pipe(reveal())
-//        .pipe(gulp.dest('.'));
-//});
 
 gulp.task('watch', ['webserver', 'default'], function () {
     gulp.watch([

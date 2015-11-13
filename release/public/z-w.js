@@ -444,6 +444,34 @@ var app = angular.module('z-w', []);
     }]);
 }());
 (function () {
+    app.controller('PressCtrl', ['$scope', function ($scope) {
+
+        $( document ).ready(function() {
+            $('.press-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.press-line').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.press-pack').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2000});
+
+        });
+
+
+
+    }]);
+}());
+(function () {
+    app.controller('ProjectPageCtrl', ['$scope', function ($scope) {
+
+        $( document ).ready(function() {
+            $('.project-page-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.project-underline').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
+            $('.project-backdrop').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2500});
+
+        });
+
+
+
+    }]);
+}());
+(function () {
     app.controller('PodcastCtrl', ['$scope', function ($scope) {
 
 
@@ -485,34 +513,6 @@ var app = angular.module('z-w', []);
         $('a.close').click(function(){
             $('.lightbox').slideUp();
         });
-
-    }]);
-}());
-(function () {
-    app.controller('PressCtrl', ['$scope', function ($scope) {
-
-        $( document ).ready(function() {
-            $('.press-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.press-line').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.press-pack').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2000});
-
-        });
-
-
-
-    }]);
-}());
-(function () {
-    app.controller('ProjectPageCtrl', ['$scope', function ($scope) {
-
-        $( document ).ready(function() {
-            $('.project-page-title').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.project-underline').velocity("stop").velocity("transition.slideUpBigIn", {duration: 1500});
-            $('.project-backdrop').velocity("stop").velocity("transition.slideLeftBigIn", {duration: 2500});
-
-        });
-
-
 
     }]);
 }());

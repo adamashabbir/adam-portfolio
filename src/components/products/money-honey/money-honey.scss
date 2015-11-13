@@ -1,11 +1,11 @@
-[data-template = "common-pence"]{
-  .common-pence-hero{
+[data-template = "money-honey"]{
+  .money-hero{
     position: relative;
     height: 650px;
-    background-image: url('/public/img/projects/alumnow.jpg');
+    background-image: url('/public/img/projects/pidentify.jpg');
     background-position: center;
     background-size: cover;
-    .overlay-common-pence {
+    .overlay-money {
       position: absolute;
       top: 0;
       right: 0;
@@ -86,15 +86,15 @@
 
     }
 
-  .common-pence-what{
+  .money-what{
     position: relative;
-    .common-pence-what-title{
+    .money-what-title{
       font-size: 40px;
       line-height: 50px;
       padding: 100px 50px 50px 50px;
       text-align: center;
     }
-    .common-pence-what-tag{
+    .money-what-tag{
       font-size: 20px;
       line-height: 30px;
       margin: 0 auto;
@@ -159,7 +159,7 @@
     .break-image {
       position: relative;
       height: 600px;
-      background-image: url('/public/img/projects/cp-filler.jpg');
+      background-image: url('/public/img/projects/pidentify.jpg');
       background-position: center;
       background-size: cover;
     }
